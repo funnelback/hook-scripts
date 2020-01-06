@@ -25,7 +25,7 @@ sync_github:
         # branches (master, release branches) so that we don't push every
         # single feature / dev branch to GitHub
         - test ! -z "${GITHUB_DEPLOY_KEY}" || exit 0
-        - git remote add github git@github.com:funnelback/hoo-scripts.git || true
+        - git remote add github git@github.com:funnelback/hook-scripts.git || true
         - mkdir -p ~/.ssh
         - echo "${GITHUB_DEPLOY_KEY}" > ~/.ssh/github_deploy_key
         - echo "${GITHUB_HOST_KEY}" >> ~/.ssh/known_hosts
